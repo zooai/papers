@@ -7,20 +7,26 @@ Academic and technical papers for Zoo Labs Foundation infrastructure and protoco
 
 **Organization**: https://github.com/zooai
 **Foundation**: Zoo Labs Foundation (501c3 non-profit)
+**Website**: https://zoo.ngo
+**AI Chat**: https://ai.zoo.ngo
+**Training Library**: https://gym.zoo.ngo
+**Blockchain**: https://zoo.network
 **Contact**: foundation@zoo.ai
 
 ## Papers
 
 Zoo Labs Foundation is dedicated to open AI research and development. Our papers cover:
 
-### 1. Zoo Labs Genesis Paper (2021-2023)
+### 1. Zoo Labs Genesis Paper (October 2021)
 
 **Documentation**: [https://docs.zoo.dev](https://docs.zoo.dev)
+**ZIP**: [ZIP-003-genesis.md](https://github.com/zooai/zips/blob/main/ZIP-003-genesis.md)
 **Status**: Foundational Document
+**Launch**: October 2021 as 100% airdrop to CryptoZoo users
 
 **Title**: "Zoo Labs: AI-Powered Asset-Backed NFTs, Agent Wallets, and Conservation Gaming"
 
-**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in AI-powered NFT utility, agent-based economics, and conservation technology. Each asset backed, ZOO-yielding NFT serves a crypto-funded wallet for each AI agent. 
+**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in AI-powered NFT utility, agent-based economics, and conservation technology. Each asset-backed, ZOO-yielding NFT serves as a crypto-funded wallet for each AI agent. Launched October 2021 as a 100% airdrop to users of CryptoZoo.
 
 **Core Architecture**:
 - **AI Agent Wallets**: Each animal NFT is a pointer to an autonomous AI agent with its own crypto wallet
@@ -45,12 +51,14 @@ Zoo Labs Foundation is dedicated to open AI research and development. Our papers
 - Extras: Partnerships, Open Source
 
 **Technical Foundation**:
-This genesis paper laid the foundation for Zoo's pioneering approach to AI agent-backed NFTs. **Zoo was one of the first projects to combine:**
+This genesis paper laid the foundation for Zoo's pioneering approach to AI agent-backed NFTs. **Zoo was one of the first projects (October 2021) to combine:**
 1. **AI agents with economic autonomy** (crypto-funded wallets per NFT)
 2. **On-chain AI coordination** (multiple agents interacting via blockchain)
 3. **Asset-backed intelligence** (AI agents holding collateral and yielding value)
 
-These principles established in 2022-2023 continue to guide the ecosystem's evolution into decentralized semantic optimization (DSO), proof-of-AI (PoAI) consensus, and collective intelligence systems.
+**Historical Note**: Launched October 2021 as a 100% airdrop to CryptoZoo community, demonstrating commitment to fair distribution and community ownership from day one.
+
+These principles established in 2021 continue to guide the ecosystem's evolution into decentralized semantic optimization (DSO), proof-of-AI (PoAI) consensus, and collective intelligence systems.
 
 ### 2. Zoo DSO (Decentralized Semantic Optimization)
 
@@ -110,10 +118,12 @@ Research focus areas:
 
 ### Zen AI Model Family (Base Frontier Models)
 
-**Repository**: https://github.com/zenlm/papers  
+**Repository**: https://zenlm.ai
+**GitHub**: https://github.com/zenlm/papers
+**Models**: https://huggingface.co/zenlm
 **Co-developed by**: Hanzo AI Inc & Zoo Labs Foundation
 
-Zen AI is a comprehensive family of ultra-efficient language models serving as the **base underlying frontier models** co-developed by Hanzo AI and Zoo Labs Foundation. All models are based on Qwen3 architectures with innovative optimizations.
+Zen AI is a comprehensive family of ultra-efficient language models serving as the **base underlying frontier models** co-developed by Hanzo AI and Zoo Labs Foundation. All models are based on Qwen3 and newer architectures with innovative optimizations.
 
 - **Main Whitepaper**: [ZEN_WHITEPAPER_2025.md](https://github.com/zenlm/papers/blob/main/ZEN_WHITEPAPER_2025.md) (v1.0.1)
   - Complete Zen ecosystem: 600M to 480B parameters
@@ -121,11 +131,15 @@ Zen AI is a comprehensive family of ultra-efficient language models serving as t
   - Recursive AI Self-Improvement System (RAIS) achieving 94% effectiveness
   - Edge deployment enabling privacy-preserving AI
 
-- **Model Documentation**: Visit https://github.com/zenlm/papers for:
+- **Model Hub**: Visit https://huggingface.co/zenlm for:
   - **Core Models**: Nano (600M edge), Eco (balanced), Coder (code gen), Omni (multimodal), Next (MoE), Guard (safety)
   - **Specialized Models**: Artist, Designer, Scribe, Director, and more
+  - **Direct Downloads**: All models available for immediate use
+
+- **Documentation**: Visit https://zenlm.ai and https://github.com/zenlm/papers for:
   - **Architecture Overview**: Complete technical specifications and training methodologies
   - **Deployment Guides**: Edge computing, cloud optimization, hybrid strategies
+  - **Integration Examples**: Use with Hanzo and Zoo ecosystems
 
 ### Partnership Model
 
@@ -140,11 +154,11 @@ This unique partnership ensures that cutting-edge AI remains accessible while ad
 ## Related Projects
 
 ### Hanzo AI Papers
-For Hanzo-specific research (ASO, DSO, HMM, Jin architecture):
+For Hanzo-specific research (ASO, HMM, Jin architecture):
 - **Repository**: https://github.com/hanzoai/papers
 - **Focus**: AI compute infrastructure, market mechanisms, multimodal systems
 
-### ZenLM Papers  
+### ZenLM Papers
 For Zen model family documentation:
 - **Repository**: https://github.com/zenlm/papers
 - **Focus**: Ultra-efficient LLMs, edge deployment, model architectures
@@ -158,6 +172,7 @@ Detailed technical specifications and protocols are documented as ZIPs:
 - [ZIP-000](https://github.com/zooai/zips/blob/main/ZIP-000-zips.md) - ZIP Process and Guidelines
 - [ZIP-001](https://github.com/zooai/zips/blob/main/ZIP-001-dso.md) - Decentralized Semantic Optimization
 - [ZIP-002](https://github.com/zooai/zips/blob/main/ZIP-002-poai.md) - Proof of AI Consensus
+- [ZIP-003](https://github.com/zooai/zips/blob/main/ZIP-003-genesis.md) - Genesis Paper (October 2021)
 - [zip-gym-tokenomics.md](https://github.com/zooai/zips/blob/main/zip-gym-tokenomics.md) - GYM Token Economics
 
 ## Building Papers
@@ -190,12 +205,16 @@ Code examples and implementations follow their respective project licenses.
 ## Contact
 
 - **Email**: foundation@zoo.ai
-- **Website**: https://zoo.ai
+- **Website**: https://zoo.ngo
+- **AI Chat**: https://ai.zoo.ngo
+- **Training**: https://gym.zoo.ngo
+- **Blockchain**: https://zoo.network
+- **Models**: https://zenlm.ai
 - **GitHub**: https://github.com/zooai
 - **Non-Profit Status**: 501(c)(3)
 
 ---
 
-**Zoo Labs Foundation**  
-Supporting open AI research and accessibility  
-https://zoo.ai
+**Zoo Labs Foundation**
+Supporting open AI research and accessibility
+https://zoo.ngo
