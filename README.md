@@ -18,26 +18,39 @@ Zoo Labs Foundation is dedicated to open AI research and development. Our papers
 **Documentation**: [https://docs.zoo.dev](https://docs.zoo.dev)
 **Status**: Foundational Document
 
-**Title**: "Zoo Labs: Asset-Backed NFTs, Liquidity Protocols, and Conservation Gaming"
+**Title**: "Zoo Labs: AI-Powered Asset-Backed NFTs, Agent Wallets, and Conservation Gaming"
 
-**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in NFT utility, Game-Fi, and conservation technology.
+**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in AI-powered NFT utility, agent-based economics, and conservation technology. **Zoo was AI-powered from day 1** - each animal NFT serves as a pointer to a crypto-funded AI agent wallet.
+
+**Core Architecture**:
+- **AI Agent Wallets**: Each animal NFT is a pointer to an autonomous AI agent with its own crypto wallet
+- **Agent-Backed NFT Standard**: First NFT standard where NFTs represent AI agents that can hold assets, execute transactions, and interact autonomously
+- **Crypto-Funded Intelligence**: AI agents are funded via NFT collateral, enabling autonomous economic behavior
+- **Agent Autonomy**: Animals can feed, grow, breed, and earn rewards through their AI agent wallets
+- **Decentralized AI Coordination**: Multiple AI agents interact within the ecosystem, coordinating through on-chain protocols
 
 **Key Innovations**:
-- **Asset-Backed Yielding NFT Standard**: First NFT standard with intrinsic collateral value
-- **NFT Liquidity Protocol**: Novel mechanism for NFT trading and value extraction
-- **Collateral-Backed NFTs**: NFTs backed by real assets, tradeable or "burnable" for value
-- **Conservation + Education Mission**: Gaming platform tied to real-world wildlife conservation
-- **Game-Fi Mechanics**: Gen 0 NFT drop, feeding/growing/breeding system, animal rewards
-- **ZOO DAO**: Decentralized governance for the ecosystem
-- **Bridging Blockchains**: Multi-chain NFT infrastructure
+- **Asset-Backed Yielding NFT Standard**: First NFT standard with AI agents as intrinsic value holders
+- **NFT Liquidity Protocol**: Novel mechanism for trading NFT pointers to AI agent wallets
+- **Collateral-Backed AI Agents**: AI agents backed by real assets, tradeable or "burnable" for value
+- **Conservation + Education Mission**: AI-powered gaming platform tied to real-world wildlife conservation
+- **Game-Fi Mechanics**: Gen 0 NFT drop, AI-driven feeding/growing/breeding, autonomous animal rewards
+- **ZOO DAO**: Decentralized governance coordinating AI agents and human participants
+- **Bridging Blockchains**: Multi-chain AI agent infrastructure
 
 **Sections**:
-- Introduction: Abstract, Mission, Zoo Animal Utility, Sustainability, Market Opportunity
-- Differentiators: NFTs that make you smile, ZOO DAO, NFT Liquidity Protocol, Bridging Blockchains
-- Game Play: Gen 0 NFT Drop, Feeding/Growing/Breeding, Zoo Animal Rewards, AR App, Collateral-Backed NFTs, Native Token, NFT Marketplace, Asset Transfer, Metaverse Companion
+- Introduction: Abstract, Mission, AI-Powered Zoo Animal Utility, Sustainability, Market Opportunity
+- Differentiators: AI Agents as NFTs, ZOO DAO, NFT Liquidity Protocol, Bridging Blockchains
+- Game Play: Gen 0 NFT Drop, AI Agent Feeding/Growing/Breeding, Zoo Animal Rewards, AI Assistant, AR App, Collateral-Backed AI Agents, Native Token, NFT Marketplace, Agent Wallet Transfer, Metaverse Companion
 - Extras: Partnerships, Open Source
 
-This genesis paper laid the foundation for Zoo's approach to utility NFTs and sustainable Game-Fi, establishing principles that continue to guide the ecosystem's evolution into decentralized AI and collective intelligence.
+**Technical Foundation**:
+This genesis paper laid the foundation for Zoo's pioneering approach to AI agent-backed NFTs. **Zoo was one of the first projects to combine:**
+1. **AI agents with economic autonomy** (crypto-funded wallets per NFT)
+2. **On-chain AI coordination** (multiple agents interacting via blockchain)
+3. **Asset-backed intelligence** (AI agents holding collateral and yielding value)
+
+These principles established in 2022-2023 continue to guide the ecosystem's evolution into decentralized semantic optimization (DSO), proof-of-AI (PoAI) consensus, and collective intelligence systems.
 
 ### 2. Zoo DSO (Decentralized Semantic Optimization)
 
