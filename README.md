@@ -1,9 +1,12 @@
-# Zoo Labs Research Papers
+<div align="center">
+  <img src=".github/zoo-logo.svg" alt="Zoo Labs Foundation" width="120" />
+  <h1>Zoo Labs Research Papers</h1>
+</div>
 
 Academic and technical papers for Zoo Labs Foundation infrastructure and protocols.
 
-**Organization**: https://github.com/zooai  
-**Foundation**: Zoo Labs Foundation (501c3 non-profit)  
+**Organization**: https://github.com/zooai
+**Foundation**: Zoo Labs Foundation (501c3 non-profit)
 **Contact**: foundation@zoo.ai
 
 ## Papers
@@ -36,7 +39,7 @@ Zen AI is a comprehensive family of ultra-efficient language models serving as t
 
 ### Partnership Model
 
-Zoo Labs Foundation (501c3) partners with Hanzo AI (Techstars '17) to:
+Zoo Labs Foundation (501c3) partners with Hanzo AI Inc (Techstars '17) to:
 - Advance open AI research
 - Ensure model accessibility
 - Promote privacy-preserving AI
