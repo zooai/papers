@@ -44,6 +44,7 @@ jobs:
           mkdir -p _site/pdfs
           cp zoo-logo.svg _site/zoo-logo.svg
           touch _site/.nojekyll
+          echo "papers.zoo.ngo" > _site/CNAME
 
       - name: Compile LaTeX papers to PDF
         run: |
