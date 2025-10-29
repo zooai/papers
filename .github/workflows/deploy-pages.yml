@@ -43,6 +43,7 @@ jobs:
           mkdir -p _site
           mkdir -p _site/pdfs
           cp zoo-logo.svg _site/zoo-logo.svg
+          touch _site/.nojekyll
 
       - name: Compile LaTeX papers to PDF
         run: |
