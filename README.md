@@ -11,8 +11,59 @@ Academic and technical papers for Zoo Labs Foundation infrastructure and protoco
 
 ## Papers
 
-Zoo Labs Foundation is dedicated to open AI research and development. Our research focuses on:
+Zoo Labs Foundation is dedicated to open AI research and development. Our papers cover:
 
+### 1. Zoo DSO (Decentralized Semantic Optimization)
+
+**File**: `zoo-dso.pdf`
+**LaTeX Source**: `zoo-dso.tex`
+**ZIP**: [ZIP-001-dso.md](https://github.com/zooai/zips/blob/main/ZIP-001-dso.md)
+**Status**: Published October 2025
+
+**Title**: "Decentralized Semantic Optimization: Byzantine-Robust Prior Aggregation for Collective AI Intelligence"
+
+**Abstract**: A decentralized protocol for aggregating AI model priors with Byzantine fault tolerance, enabling collective intelligence at network scale.
+
+**Key Contributions**:
+- Byzantine-robust prior aggregation
+- Distributed active inference framework
+- Multi-agent coordination via shared priors
+- Integration with Hanzo's ASO and HMM
+- Proof-of-AI (PoAI) consensus mechanisms
+
+**Builds On**: [Hanzo ASO (HIP-002)](https://github.com/hanzoai/papers/blob/main/hips/HIP-002-aso.md), [Hanzo HMM (HIP-004)](https://github.com/hanzoai/papers/blob/main/hips/HIP-004-hmm.md)
+
+### 2. Zoo PoAI (Proof of AI)
+
+**ZIP**: [ZIP-002-poai.md](https://github.com/zooai/zips/blob/main/ZIP-002-poai.md)
+**Status**: Active Specification
+
+**Title**: "Proof of AI: Bayesian Active Inference-Inspired Consensus for Verifiable AI Compute"
+
+**Abstract**: Zoo's consensus mechanism for quality verification of AI compute. A training-free, distributed GRPO, LLM-agnostic experiential layer for building collective intelligence.
+
+**Key Features**:
+- TEE attestations and Merkle proofs
+- Bayesian active inference quality scoring
+- Integration with Hanzo HMM for economic settlement
+- Slashing for fraudulent attestations
+
+### 3. Zoo Tokenomics
+
+**File**: [zip-gym-tokenomics.md](https://github.com/zooai/zips/blob/main/zip-gym-tokenomics.md)
+**Status**: Active Specification
+
+**Title**: "GYM Token Economics and Integration"
+
+**Overview**: Economic model for Zoo's decentralized AI training network.
+
+**Key Features**:
+- GYM token specification (1B supply on BSC)
+- Compute mining rewards and quality metrics
+- Staking tiers (Bronze to Diamond)
+- Slashing conditions and governance
+
+Research focus areas:
 - Decentralized semantic learning protocols
 - Byzantine-robust prior aggregation
 - Active inference at network scale
@@ -59,9 +110,35 @@ For Zen model family documentation:
 - **Repository**: https://github.com/zenlm/papers
 - **Focus**: Ultra-efficient LLMs, edge deployment, model architectures
 
+## Zoo Improvement Proposals (ZIPs)
+
+Detailed technical specifications and protocols are documented as ZIPs:
+
+**Repository**: https://github.com/zooai/zips
+
+- [ZIP-000](https://github.com/zooai/zips/blob/main/ZIP-000-zips.md) - ZIP Process and Guidelines
+- [ZIP-001](https://github.com/zooai/zips/blob/main/ZIP-001-dso.md) - Decentralized Semantic Optimization
+- [ZIP-002](https://github.com/zooai/zips/blob/main/ZIP-002-poai.md) - Proof of AI Consensus
+- [zip-gym-tokenomics.md](https://github.com/zooai/zips/blob/main/zip-gym-tokenomics.md) - GYM Token Economics
+
 ## Building Papers
 
-Papers use LaTeX for academic formatting. Build instructions available at:
+Papers use LaTeX for academic formatting.
+
+**Build from source**:
+```bash
+cd zoo-papers
+pdflatex zoo-dso.tex
+bibtex zoo-dso
+pdflatex zoo-dso.tex
+pdflatex zoo-dso.tex
+```
+
+**Requirements**:
+- LaTeX distribution (TeX Live, MiKTeX, or MacTeX)
+- BibTeX for references
+
+Related build instructions:
 - Hanzo AI Papers: https://github.com/hanzoai/papers#building-papers
 - ZenLM Papers: https://github.com/zenlm/papers#building-papers
 
