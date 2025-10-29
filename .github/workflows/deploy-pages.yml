@@ -26,17 +26,14 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
-      - name: Install LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-full pandoc
 
       - name: Create Pages directory structure
         run: |
