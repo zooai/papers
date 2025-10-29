@@ -151,6 +151,188 @@ Zoo Labs Foundation (501c3) partners with Hanzo AI Inc (Techstars '17) to:
 
 This unique partnership ensures that cutting-edge AI remains accessible while advancing the state of the art.
 
+---
+
+## 📚 Comprehensive Research Papers (October 2025)
+
+**Status**: ✅ COMPLETE - 7 papers, ~9,500 lines, 362KB, 140+ citations
+**GitHub Pages**: https://zooai.github.io/papers/
+
+### Foundation & Mission
+
+#### 1. Zoo Foundation Mission ✅
+**File**: `zoo-foundation-mission.tex` (43KB, ~1,100 lines)
+**Version**: v2025.09 (September 2025)
+
+Documents Zoo Labs Foundation's 501(c)(3) non-profit mission across three pillars:
+- **Conservation AI**: 73 species genomes sequenced, de-extinction research
+- **Educational AI**: 87,000+ users across 142 countries, 420,000+ models trained
+- **Frontier AI**: Pushing boundaries of AI+blockchain synthesis
+
+### Core Infrastructure
+
+#### 2. Zoo Network Architecture ✅
+**File**: `zoo-network-architecture.tex` (48KB, ~1,200 lines)
+**Version**: v2025.09 (September 2025)
+
+Complete L2 AI specialization layer architecture:
+- Layered design: Lux (L0) → Hanzo (L1) → Zoo (L2)
+- HLLM integration with 2.8ms routing overhead
+- Post-quantum cryptography (NIST FIPS 203/204)
+- Federated learning and Experience Ledger
+- 40+ academic references
+
+#### 3. Zoo Tokenomics ✅
+**File**: `zoo-tokenomics.tex` (77KB, 2,050+ lines)
+**Version**: v2025.09 (September 2025)
+
+Revolutionary 100% airdrop tokenomics model:
+- **Total Supply**: 2 trillion KEEPER tokens
+- **DAO Allocation**: 1 trillion (50%)
+- **Community Airdrop**: 1 trillion (100% distributed, zero VC/private sales)
+- **Gini Coefficient**: 0.61 (vs industry 0.80-0.90)
+- **Validator Requirements**: 1,000 KEEPER minimum stake (democratically low)
+
+Cross-network validator comparison (Lux/Hanzo/Zoo):
+- Lux: 100 validators, 1B tokens each, 100-year unlock, 1M minimum stake
+- Hanzo: Unlimited validators, 0 tokens required (self-mine with compute)
+- Zoo: Unlimited validators, 1,000 KEEPER minimum stake (democratic participation)
+
+### AI Training & Optimization
+
+#### 4. Gym Training Platform ✅
+**File**: `gym-training-platform.tex` (49KB, ~1,228 lines)
+**Version**: v2023.05 → v2025.09 (2.5-year evolution)
+
+Comprehensive AI training platform:
+- **100+ Models**: Qwen3, LLaMA, Mistral, DeepSeek, Yi, Gemma, ChatGLM, Phi
+- **8 Training Methods**: SFT, LoRA, QLoRA, PPO, DPO, GRPO, GSPO, KTO
+- **Training-Free GRPO Integration**: Revolutionary semantic optimization
+- **Educational Impact**: 87K users, 142 countries, 420K models trained
+- **31 Academic Citations**
+
+#### 5. HLLM with Training-Free GRPO ✅
+**File**: `hllm-training-free-grpo.tex` (71KB, ~50 pages)
+**Version**: v2025.09 (September 2025)
+
+Revolutionary AI training paradigm shift:
+- **99.8% Cost Reduction**: $18 vs $10,000+ for traditional fine-tuning
+- **AIME24**: 82.7% accuracy (+2.7% improvement over fine-tuning)
+- **AIME25**: 73.3% accuracy (+5.4% improvement)
+- **100× Data Efficiency**: 100 examples vs 10,000+ required
+- **Hamiltonian Invariant**: Ψ·Θ = κ (conservation law)
+- **3-Stage Algorithm**: Trajectory Summarization → Group Advantage Extraction → Batch Consolidation
+- **30+ Academic Citations**
+
+#### 6. Experience Ledger & DSO ✅
+**File**: `experience-ledger-dso.tex` (54KB, ~1,600 lines)
+**Version**: v2025.09 (September 2025)
+
+Decentralized Semantic Optimization implementation:
+- **Three-Layer Storage**: On-chain (Merkle roots) → IPFS (mutable) → Arweave (permanent)
+- **7680-Dimensional Embeddings**: Native dimension from Zen-Reranker
+- **Byzantine-Robust Curation**: Median aggregation, 92% accuracy with 33% malicious nodes
+- **3 Formal Theorems**: With proofs for Byzantine resistance, convergence, coverage growth
+- **5 Algorithms**: Merkle construction, retrieval, extraction, etc.
+- **Operational Cost**: $3,726 annual vs $50K+ alternatives
+- **17+ Academic Citations**
+
+### ZIP Specifications
+
+#### 7. ZIP-002: Zen-Reranker ✅
+**File**: `zip-002-zen-reranker.tex` (49KB, ~1,288 lines)
+**Version**: v2025.10 (October 2025)
+
+Technical specification for Zen-Reranker:
+- **Native 7680-Dim Embeddings**: 10× larger than typical 768-dim
+- **BitDelta Compression**: 31.87× ratio (964 bytes from 30KB)
+- **Performance**: 94.7% Recall@5 cross-model retrieval
+- **Byzantine-Robust Aggregation**: 92% accuracy with malicious nodes
+- **Smart Contract Integration**: On-chain experience registry
+- **MTEB Benchmark**: 68.4 average
+- **25 Academic Citations**
+
+### Key Innovations Documented
+
+**Tokenomics Revolution:**
+- ✅ First 100% airdrop AI token (zero VC/private sales)
+- ✅ Gini coefficient 0.61 (most equitable distribution in AI+blockchain)
+- ✅ Democratic validator participation (1,000 KEEPER stake)
+
+**AI Training Breakthrough:**
+- ✅ 99.8% cost reduction ($18 vs $10,000+)
+- ✅ 100× data efficiency (100 vs 10,000+ examples)
+- ✅ +2.7% accuracy improvement (AIME24: 82.7%)
+- ✅ Hamiltonian conservation law (Ψ·Θ = κ)
+
+**Infrastructure:**
+- ✅ Decentralized Semantic Optimization (DSO)
+- ✅ Byzantine fault tolerance (92% accuracy with 33% malicious)
+- ✅ Three-layer storage (on-chain/IPFS/Arweave)
+- ✅ 7680-dimensional native embeddings
+
+**Educational Impact:**
+- ✅ 87,000+ users worldwide
+- ✅ 420,000+ models trained
+- ✅ 142 countries participating
+- ✅ Zero barriers to entry
+
+### Building These Papers
+
+**Automated CI/CD:**
+All papers are automatically compiled to PDF on every commit via GitHub Actions.
+
+**Local Compilation:**
+```bash
+# Install LaTeX (one-time)
+brew install basictex  # macOS
+# or: sudo apt-get install texlive-full  # Ubuntu
+
+# Compile all papers
+for tex in *.tex; do
+  base="${tex%.tex}"
+  pdflatex "$tex"
+  bibtex "$base" 2>/dev/null || true
+  pdflatex "$tex"
+  pdflatex "$tex"
+done
+
+# PDFs will be in current directory
+ls -lh *.pdf
+```
+
+**Download PDFs:**
+Visit https://zooai.github.io/papers/ to download all compiled PDFs.
+
+### Citation
+
+If you use these papers in your research, please cite:
+
+```bibtex
+@misc{zoo2025foundation,
+  title={Zoo Labs Foundation: AI-Blockchain Research for Conservation, Education, and Frontier Science},
+  author={Zoo Labs Foundation Inc},
+  year={2025},
+  organization={zoo.ngo}
+}
+
+@misc{zoo2025grpo,
+  title={HLLM with Training-Free GRPO: 99.8\% Cost Reduction via Semantic Optimization},
+  author={Zoo Labs Foundation Inc},
+  year={2025},
+  organization={zoo.ngo}
+}
+
+@misc{zoo2025dso,
+  title={Experience Ledger: Decentralized Semantic Optimization for Large Language Models},
+  author={Zoo Labs Foundation Inc},
+  year={2025},
+  organization={zoo.ngo}
+}
+```
+
+---
+
 ## Related Projects
 
 ### Hanzo AI Papers
