@@ -36,7 +36,7 @@ Zen AI is a comprehensive family of ultra-efficient language models serving as t
 
 ### Partnership Model
 
-Zoo Labs Foundation (501c3) partners with Hanzo AI (Techstars '24) to:
+Zoo Labs Foundation (501c3) partners with Hanzo AI (Techstars '17) to:
 - Advance open AI research
 - Ensure model accessibility
 - Promote privacy-preserving AI
