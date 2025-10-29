@@ -192,11 +192,12 @@ Revolutionary 100% airdrop tokenomics model:
 - **Community Airdrop**: 1 trillion (100% distributed, zero VC/private sales)
 - **Gini Coefficient**: 0.61 (vs industry 0.80-0.90)
 - **Validator Requirements**: 1,000 KEEPER minimum stake (democratically low)
+- **Proof of AI (PoAI)**: Validation weighted by LLM experience sharing and semantic contributions
 
 Cross-network validator comparison (Lux/Hanzo/Zoo):
-- Lux: 100 validators, 1B tokens each, 100-year unlock, 1M minimum stake
-- Hanzo: Unlimited validators, 1 AI minimum (self-mined on any device, then participate in HMM compute market)
-- Zoo: Unlimited validators, 1,000 KEEPER minimum stake (democratic participation)
+- Lux: 100 validators, 1B tokens each, 100-year unlock, 1M minimum stake (PoS + Genesis)
+- Hanzo: Unlimited validators, 1 AI minimum (self-mined on any device, then participate in HMM compute market) (PoW compute)
+- Zoo: Unlimited validators, 1,000 KEEPER minimum stake (PoAI - weighted by experience contributions)
 
 ### AI Training & Optimization
 
@@ -257,7 +258,7 @@ Technical specification for Zen-Reranker:
 **Tokenomics Revolution:**
 - ✅ First 100% airdrop AI token (zero VC/private sales)
 - ✅ Gini coefficient 0.61 (most equitable distribution in AI+blockchain)
-- ✅ Democratic validator participation (1,000 KEEPER stake)
+- ✅ Proof of AI (PoAI) validation weighted by experience sharing (1,000 KEEPER stake)
 
 **AI Training Breakthrough:**
 - ✅ 99.8% cost reduction ($18 vs $10,000+)
