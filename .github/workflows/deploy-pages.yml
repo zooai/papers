@@ -40,6 +40,7 @@ jobs:
           mkdir -p _site
           mkdir -p _site/pdfs
           cp zoo-logo.svg _site/zoo-logo.svg
+          cp favicon.ico _site/favicon.ico
           touch _site/.nojekyll
           echo "papers.zoo.ngo" > _site/CNAME
 
@@ -73,6 +74,7 @@ jobs:
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Zoo Network & Gym Research Papers</title>
+              <link rel="icon" type="image/x-icon" href="/favicon.ico">
             <style>
               * { margin: 0; padding: 0; box-sizing: border-box; }
               body {
