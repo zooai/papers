@@ -13,14 +13,14 @@ Academic and technical papers for Zoo Labs Foundation infrastructure and protoco
 
 Zoo Labs Foundation is dedicated to open AI research and development. Our papers cover:
 
-### 1. Zoo Labs Genesis Paper (2022-2023)
+### 1. Zoo Labs Genesis Paper (2021-2023)
 
 **Documentation**: [https://docs.zoo.dev](https://docs.zoo.dev)
 **Status**: Foundational Document
 
 **Title**: "Zoo Labs: AI-Powered Asset-Backed NFTs, Agent Wallets, and Conservation Gaming"
 
-**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in AI-powered NFT utility, agent-based economics, and conservation technology. **Zoo was AI-powered from day 1** - each animal NFT serves as a pointer to a crypto-funded AI agent wallet.
+**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in AI-powered NFT utility, agent-based economics, and conservation technology. Each asset backed, ZOO-yielding NFT serves a crypto-funded wallet for each AI agent. 
 
 **Core Architecture**:
 - **AI Agent Wallets**: Each animal NFT is a pointer to an autonomous AI agent with its own crypto wallet
