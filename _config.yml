@@ -4,9 +4,9 @@ description: Academic and technical papers for Zoo Labs Foundation infrastructur
 baseurl: "/papers"
 url: "https://zooai.github.io"
 
-# Theme
-theme: jekyll-theme-minimal
-remote_theme: pages-themes/minimal@v0.2.0
+# Theme - DISABLED (using custom static HTML generator in GitHub Actions)
+# theme: jekyll-theme-minimal
+# remote_theme: pages-themes/minimal@v0.2.0
 
 # Organization
 github:
@@ -39,22 +39,22 @@ exclude:
 # Collections
 collections_dir: .
 
-# Plugins
-plugins:
-  - jekyll-relative-links
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-titles-from-headings
+# Plugins - DISABLED (not needed for static HTML generation)
+# plugins:
+#   - jekyll-relative-links
+#   - jekyll-optional-front-matter
+#   - jekyll-readme-index
+#   - jekyll-titles-from-headings
 
-relative_links:
-  enabled: true
-  collections: true
+# relative_links:
+#   enabled: true
+#   collections: true
 
-titles_from_headings:
-  enabled: true
-  strip_title: true
-  collections: true
+# titles_from_headings:
+#   enabled: true
+#   strip_title: true
+#   collections: true
 
-readme_index:
-  enabled: true
-  remove_originals: false
+# readme_index:
+#   enabled: true
+#   remove_originals: false
