@@ -1,0 +1,377 @@
+name: Deploy Papers to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '**.tex'
+      - '**.md'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full pandoc
+
+      - name: Create Pages directory structure
+        run: |
+          mkdir -p _site
+          mkdir -p _site/pdfs
+
+      - name: Compile LaTeX papers to PDF
+        run: |
+          for texfile in *.tex; do
+            if [ -f "$texfile" ]; then
+              echo "Compiling $texfile..."
+              basename="${texfile%.tex}"
+
+              pdflatex -interaction=nonstopmode "$texfile" || true
+              bibtex "$basename" 2>/dev/null || true
+              pdflatex -interaction=nonstopmode "$texfile" || true
+              pdflatex -interaction=nonstopmode "$texfile" || true
+
+              if [ -f "${basename}.pdf" ]; then
+                cp "${basename}.pdf" _site/pdfs/
+                echo "✓ ${basename}.pdf"
+              fi
+
+              rm -f *.aux *.log *.bbl *.blg *.out *.toc *.lof *.lot
+            fi
+          done
+
+      - name: Generate HTML index
+        run: |
+          cat > _site/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Zoo Network & Gym Research Papers</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 2rem;
+              }
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                padding: 3rem;
+              }
+              h1 {
+                color: #667eea;
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                text-align: center;
+              }
+              .subtitle {
+                text-align: center;
+                color: #666;
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+              }
+              .stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin-bottom: 3rem;
+              }
+              .stat-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 1.5rem;
+                border-radius: 10px;
+                text-align: center;
+              }
+              .stat-number {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+              }
+              .stat-label {
+                font-size: 0.9rem;
+                opacity: 0.9;
+              }
+              .papers {
+                display: grid;
+                gap: 1.5rem;
+              }
+              .paper {
+                border: 2px solid #e0e0e0;
+                border-radius: 10px;
+                padding: 1.5rem;
+                transition: all 0.3s ease;
+              }
+              .paper:hover {
+                border-color: #667eea;
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+                transform: translateY(-2px);
+              }
+              .paper-title {
+                color: #667eea;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+              }
+              .paper-meta {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+              }
+              .paper-desc {
+                margin-bottom: 1rem;
+                color: #555;
+              }
+              .paper-topics {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+              }
+              .topic {
+                background: #f0f0f0;
+                padding: 0.3rem 0.8rem;
+                border-radius: 15px;
+                font-size: 0.85rem;
+                color: #555;
+              }
+              .download-btn {
+                display: inline-block;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 0.7rem 1.5rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: transform 0.2s ease;
+              }
+              .download-btn:hover {
+                transform: scale(1.05);
+              }
+              .footer {
+                text-align: center;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 2px solid #e0e0e0;
+                color: #666;
+              }
+              .footer a {
+                color: #667eea;
+                text-decoration: none;
+              }
+              .highlight {
+                background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>🦁 Zoo Network & Gym Research Papers</h1>
+              <p class="subtitle">Democratizing AI through revolutionary blockchain infrastructure</p>
+
+              <div class="stats">
+                <div class="stat-card">
+                  <div class="stat-number">7</div>
+                  <div class="stat-label">Research Papers</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">99.8%</div>
+                  <div class="stat-label">Cost Reduction</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">87K+</div>
+                  <div class="stat-label">Global Users</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">142</div>
+                  <div class="stat-label">Countries</div>
+                </div>
+              </div>
+
+              <div class="papers">
+                <div class="paper">
+                  <h2 class="paper-title">1. Zoo Foundation Mission</h2>
+                  <div class="paper-meta">43KB | ~1,100 lines | Foundation & Mission</div>
+                  <div class="paper-desc">
+                    Establishes Zoo Labs Foundation's 501(c)(3) non-profit mission: <span class="highlight">Conservation AI, Educational AI, and Frontier AI research</span>.
+                    Documents the alchemical synthesis of AI and blockchain for planetary benefit.
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">Conservation Genomics</span>
+                    <span class="topic">Educational Democratization</span>
+                    <span class="topic">Frontier AI</span>
+                    <span class="topic">73 Species</span>
+                  </div>
+                  <a href="pdfs/zoo-foundation-mission.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">2. Zoo Network Architecture</h2>
+                  <div class="paper-meta">48KB | ~1,200 lines | Infrastructure</div>
+                  <div class="paper-desc">
+                    Complete <span class="highlight">L2 AI specialization layer</span> architecture built on Hanzo compute infrastructure.
+                    Documents HLLM integration, federated learning, and Experience Ledger design.
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">Layered Design</span>
+                    <span class="topic">HLLM Routing</span>
+                    <span class="topic">Federated Learning</span>
+                    <span class="topic">40+ Citations</span>
+                  </div>
+                  <a href="pdfs/zoo-network-architecture.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">3. Zoo Tokenomics</h2>
+                  <div class="paper-meta">2,050+ lines | Economics</div>
+                  <div class="paper-desc">
+                    Revolutionary <span class="highlight">100% airdrop tokenomics</span> with zero VC/private sales.
+                    First comprehensive framework for community-owned AI infrastructure with democratic validator participation (1,000 ZOO stake).
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">100% Airdrop</span>
+                    <span class="topic">Gini 0.61</span>
+                    <span class="topic">DAO Governance</span>
+                    <span class="topic">Cross-Network</span>
+                  </div>
+                  <a href="pdfs/zoo-tokenomics.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">4. Gym Training Platform</h2>
+                  <div class="paper-meta">49KB | ~1,228 lines | AI Training</div>
+                  <div class="paper-desc">
+                    Comprehensive platform supporting <span class="highlight">100+ models and 8 training methods</span>.
+                    Documents 2.5-year evolution from LLaMA Factory to democratized AI training across 142 countries.
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">100+ Models</span>
+                    <span class="topic">GRPO/GSPO</span>
+                    <span class="topic">420K Models Trained</span>
+                    <span class="topic">31 Citations</span>
+                  </div>
+                  <a href="pdfs/gym-training-platform.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">5. HLLM with Training-Free GRPO</h2>
+                  <div class="paper-meta">71KB | ~50 pages | Breakthrough Innovation</div>
+                  <div class="paper-desc">
+                    Revolutionary paradigm shift achieving <span class="highlight">99.8% cost reduction ($18 vs $10,000+)</span>
+                    and +2.7% accuracy improvement via semantic optimization. Introduces Hamiltonian invariant (Ψ·Θ = κ).
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">99.8% Cost Reduction</span>
+                    <span class="topic">82.7% AIME24</span>
+                    <span class="topic">100× Data Efficiency</span>
+                    <span class="topic">3-Stage Algorithm</span>
+                  </div>
+                  <a href="pdfs/hllm-training-free-grpo.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">6. Experience Ledger & DSO</h2>
+                  <div class="paper-meta">54KB | ~1,600 lines | Implementation</div>
+                  <div class="paper-desc">
+                    <span class="highlight">Decentralized Semantic Optimization</span> with Byzantine-robust curation.
+                    Three-layer storage (on-chain/IPFS/Arweave), 7680-dim embeddings, formal theorems and proofs.
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">DSO Algorithm</span>
+                    <span class="topic">Byzantine Robust</span>
+                    <span class="topic">Merkle Proofs</span>
+                    <span class="topic">$3,726 Annual Cost</span>
+                  </div>
+                  <a href="pdfs/experience-ledger-dso.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+
+                <div class="paper">
+                  <h2 class="paper-title">7. ZIP-002: Zen-Reranker</h2>
+                  <div class="paper-meta">49KB | ~1,288 lines | Technical Specification</div>
+                  <div class="paper-desc">
+                    Native <span class="highlight">7680-dimensional embeddings</span> with BitDelta compression (31.87× ratio).
+                    Byzantine-robust aggregation achieving 94.7% Recall@5 with smart contract integration.
+                  </div>
+                  <div class="paper-topics">
+                    <span class="topic">7680-Dim Native</span>
+                    <span class="topic">BitDelta 31.87×</span>
+                    <span class="topic">94.7% Recall@5</span>
+                    <span class="topic">Smart Contracts</span>
+                  </div>
+                  <a href="pdfs/zip-002-zen-reranker.pdf" class="download-btn">📄 Download PDF</a>
+                </div>
+              </div>
+
+              <div class="footer">
+                <p><strong>Zoo Labs Foundation Inc</strong> - 501(c)(3) Non-Profit Organization</p>
+                <p>
+                  <a href="https://zoo.ngo">Website</a> •
+                  <a href="https://github.com/zooai/gym">GitHub</a> •
+                  <a href="https://docs.zoo.ngo">Documentation</a> •
+                  <a href="https://discord.gg/zooai">Discord</a>
+                </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                  📜 Licensed under CC BY 4.0 • All papers are open access and freely available
+                </p>
+              </div>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Copy documentation
+        run: |
+          mkdir -p _site/docs
+          cp PAPERS_README.md _site/docs/README.md
+          cp PAPER_TIMELINE.md _site/docs/PAPER_TIMELINE.md
+          cp README.md _site/docs/REPO_README.md
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
