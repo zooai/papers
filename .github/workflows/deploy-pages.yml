@@ -42,6 +42,7 @@ jobs:
         run: |
           mkdir -p _site
           mkdir -p _site/pdfs
+          cp zoo-logo.svg _site/zoo-logo.svg
 
       - name: Compile LaTeX papers to PDF
         run: |
@@ -96,6 +97,14 @@ jobs:
                 font-size: 3rem;
                 margin-bottom: 1rem;
                 text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+              }
+              .logo {
+                height: 80px;
+                width: auto;
               }
               .subtitle {
                 text-align: center;
@@ -201,7 +210,10 @@ jobs:
           </head>
           <body>
             <div class="container">
-              <h1>🦁 Zoo Network & Gym Research Papers</h1>
+              <h1>
+                <img src="zoo-logo.svg" alt="Zoo Labs Foundation" class="logo">
+                Zoo Network & Gym Research Papers
+              </h1>
               <p class="subtitle">Democratizing AI through revolutionary blockchain infrastructure</p>
 
               <div class="stats">
