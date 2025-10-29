@@ -19,7 +19,7 @@ Zoo Labs Foundation is dedicated to open AI research and development. Our papers
 
 ### 1. Zoo Labs Genesis Paper (October 2021)
 
-**Documentation**: [https://docs.zoo.dev](https://docs.zoo.dev)
+**Documentation**: [https://zoolabs.gitbook.io/whitepaper/](https://zoolabs.gitbook.io/whitepaper/)
 **ZIP**: [ZIP-003-genesis.md](https://github.com/zooai/zips/blob/main/ZIP-003-genesis.md)
 **Status**: Foundational Document
 **Launch**: October 2021 as 100% airdrop to CryptoZoo users
