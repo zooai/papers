@@ -195,7 +195,7 @@ Revolutionary 100% airdrop tokenomics model:
 
 Cross-network validator comparison (Lux/Hanzo/Zoo):
 - Lux: 100 validators, 1B tokens each, 100-year unlock, 1M minimum stake
-- Hanzo: Unlimited validators, 0 tokens required (self-mine with compute)
+- Hanzo: Unlimited validators, 1 AI minimum (self-mined on any device, then participate in HMM compute market)
 - Zoo: Unlimited validators, 1,000 KEEPER minimum stake (democratic participation)
 
 ### AI Training & Optimization

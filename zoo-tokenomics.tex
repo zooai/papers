@@ -1129,11 +1129,11 @@ Each network implements distinct validator staking requirements optimized for it
 \toprule
 \textbf{Requirement} & \textbf{Lux (L0)} & \textbf{Hanzo (L1)} & \textbf{Zoo (L2)} \\
 \midrule
-Min Stake & 1M $\Lux$ & 0 $\Hanzo$ & 1,000 $\KEEPER$ \\
+Min Stake & 1M $\Lux$ & 1 AI & 1,000 $\KEEPER$ \\
 Validator Count & 100 (fixed) & Unlimited & Unlimited \\
 Validator Allocation & 1B/each & None & None \\
 Unlock Schedule & 100 years & N/A & N/A \\
-Entry Barrier & High (security) & Zero (compute) & Low (participation) \\
+Entry Barrier & High (security) & 1 AI (self-mined) & Low (participation) \\
 Validation Method & PoS + Genesis & PoW (compute) & PoS (staking) \\
 \bottomrule
 \end{tabular}
@@ -1150,13 +1150,15 @@ Validation Method & PoS + Genesis & PoW (compute) & PoS (staking) \\
 \item Rationale: Base consensus layer requires maximum security and stability
 \end{itemize}
 
-\textbf{Hanzo (L1) - Zero-Barrier Compute Mining:}
+\textbf{Hanzo (L1) - Self-Mined Compute Participation:}
 \begin{itemize}
-\item No token requirement to validate - validators self-mine by offering GPU/TPU compute
-\item Proof-of-Compute: Completing AI/ML training jobs earns $\Hanzo$ rewards
-\item Anyone with compute hardware can participate immediately
+\item 1 AI token minimum stake (self-mined on any device - laptop, phone, etc.)
+\item Mine your first 1 AI token locally, then become a Hanzo validator
+\item Participate in HMM (Hamiltonian Market Maker) compute market consensus
+\item Provide compute resources on Blackwell GPU infrastructure
+\item Fully private public AI chain with permissionless participation
 \item Validator rewards scale with compute contribution (FLOPS delivered)
-\item Rationale: Compute layer prioritizes accessibility and permissionless contribution
+\item Rationale: Low barrier (just mine 1 token) ensures participation commitment while maintaining accessibility
 \end{itemize}
 
 \textbf{Zoo (L2) - Low-Barrier Democratic Participation:}
