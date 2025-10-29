@@ -13,7 +13,33 @@ Academic and technical papers for Zoo Labs Foundation infrastructure and protoco
 
 Zoo Labs Foundation is dedicated to open AI research and development. Our papers cover:
 
-### 1. Zoo DSO (Decentralized Semantic Optimization)
+### 1. Zoo Labs Genesis Paper (2022-2023)
+
+**Documentation**: [https://docs.zoo.dev](https://docs.zoo.dev)
+**Status**: Foundational Document
+
+**Title**: "Zoo Labs: Asset-Backed NFTs, Liquidity Protocols, and Conservation Gaming"
+
+**Abstract**: The foundational whitepaper for Zoo Labs ecosystem, introducing revolutionary concepts in NFT utility, Game-Fi, and conservation technology.
+
+**Key Innovations**:
+- **Asset-Backed Yielding NFT Standard**: First NFT standard with intrinsic collateral value
+- **NFT Liquidity Protocol**: Novel mechanism for NFT trading and value extraction
+- **Collateral-Backed NFTs**: NFTs backed by real assets, tradeable or "burnable" for value
+- **Conservation + Education Mission**: Gaming platform tied to real-world wildlife conservation
+- **Game-Fi Mechanics**: Gen 0 NFT drop, feeding/growing/breeding system, animal rewards
+- **ZOO DAO**: Decentralized governance for the ecosystem
+- **Bridging Blockchains**: Multi-chain NFT infrastructure
+
+**Sections**:
+- Introduction: Abstract, Mission, Zoo Animal Utility, Sustainability, Market Opportunity
+- Differentiators: NFTs that make you smile, ZOO DAO, NFT Liquidity Protocol, Bridging Blockchains
+- Game Play: Gen 0 NFT Drop, Feeding/Growing/Breeding, Zoo Animal Rewards, AR App, Collateral-Backed NFTs, Native Token, NFT Marketplace, Asset Transfer, Metaverse Companion
+- Extras: Partnerships, Open Source
+
+This genesis paper laid the foundation for Zoo's approach to utility NFTs and sustainable Game-Fi, establishing principles that continue to guide the ecosystem's evolution into decentralized AI and collective intelligence.
+
+### 2. Zoo DSO (Decentralized Semantic Optimization)
 
 **File**: `zoo-dso.pdf`
 **LaTeX Source**: `zoo-dso.tex`
@@ -33,7 +59,7 @@ Zoo Labs Foundation is dedicated to open AI research and development. Our papers
 
 **Builds On**: [Hanzo ASO (HIP-002)](https://github.com/hanzoai/papers/blob/main/hips/HIP-002-aso.md), [Hanzo HMM (HIP-004)](https://github.com/hanzoai/papers/blob/main/hips/HIP-004-hmm.md)
 
-### 2. Zoo PoAI (Proof of AI)
+### 3. Zoo PoAI (Proof of AI)
 
 **ZIP**: [ZIP-002-poai.md](https://github.com/zooai/zips/blob/main/ZIP-002-poai.md)
 **Status**: Active Specification
@@ -48,7 +74,7 @@ Zoo Labs Foundation is dedicated to open AI research and development. Our papers
 - Integration with Hanzo HMM for economic settlement
 - Slashing for fraudulent attestations
 
-### 3. Zoo Tokenomics
+### 4. Zoo Tokenomics
 
 **File**: [zip-gym-tokenomics.md](https://github.com/zooai/zips/blob/main/zip-gym-tokenomics.md)
 **Status**: Active Specification
