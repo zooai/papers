@@ -85,7 +85,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: zoo-research-papers
-          path: papers/pdfs/*.pdf
+          path: pdfs/*.pdf
           retention-days: 90
 
       - name: Create release with PDFs
@@ -109,7 +109,7 @@ jobs:
             - ZIP-002: Zen-Reranker
 
             Download individual PDFs below or grab the full artifact bundle.
-          files: papers/pdfs/*.pdf
+          files: pdfs/*.pdf
           draft: false
           prerelease: false
         env:
@@ -121,10 +121,8 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          cd papers
           git add pdfs/*.pdf 2>/dev/null || true
 
-          cd ..
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
