@@ -16,6 +16,9 @@ on:
       - '**.tex'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   compile-pdfs:
     runs-on: ubuntu-latest
@@ -75,45 +78,12 @@ jobs:
           echo "Total .tex files: $total_tex"
           echo "Successfully compiled: $total_pdf"
 
-          if [ "$total_pdf" -eq "$total_tex" ]; then
-            echo "✅ All papers compiled successfully!"
-          else
-            echo "⚠️  Some papers failed to compile"
-          fi
-
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:
           name: zoo-research-papers
           path: pdfs/*.pdf
           retention-days: 90
-
-      - name: Create release with PDFs
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: papers-${{ github.run_number }}
-          name: Zoo Research Papers - Build ${{ github.run_number }}
-          body: |
-            # Zoo Network & Gym Research Papers
-
-            Automatically compiled LaTeX papers from commit ${{ github.sha }}.
-
-            ## Papers Included:
-            - Zoo Foundation Mission
-            - Zoo Network Architecture
-            - Zoo Tokenomics
-            - Gym Training Platform
-            - HLLM with Training-Free GRPO
-            - Experience Ledger & Decentralized Semantic Optimization
-            - ZIP-002: Zen-Reranker
-
-            Download individual PDFs below or grab the full artifact bundle.
-          files: pdfs/*.pdf
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit PDFs back to repository
         if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
