@@ -1,8 +1,8 @@
 # Zoo Labs Foundation - Research Papers
 title: Zoo Labs Research Papers
 description: Academic and technical papers for Zoo Labs Foundation infrastructure and protocols
-baseurl: "/papers"
-url: "https://zooai.github.io"
+baseurl: ""
+url: "https://papers.zoo.ngo"
 
 # Theme - DISABLED (using custom static HTML generator in GitHub Actions)
 # theme: jekyll-theme-minimal
