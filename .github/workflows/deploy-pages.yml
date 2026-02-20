@@ -215,20 +215,20 @@ jobs:
 
               <div class="stats">
                 <div class="stat-card">
-                  <div class="stat-number">7</div>
+                  <div class="stat-number">16</div>
                   <div class="stat-label">Research Papers</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-number">99.8%</div>
-                  <div class="stat-label">Cost Reduction</div>
+                  <div class="stat-number">5</div>
+                  <div class="stat-label">Research Areas</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-number">87K+</div>
-                  <div class="stat-label">Global Users</div>
+                  <div class="stat-number">CC BY 4.0</div>
+                  <div class="stat-label">Open Access</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-number">142</div>
-                  <div class="stat-label">Countries</div>
+                  <div class="stat-number">501(c)(3)</div>
+                  <div class="stat-label">Non-Profit</div>
                 </div>
               </div>
 
@@ -286,12 +286,12 @@ jobs:
                   <div class="paper-meta">49KB | ~1,228 lines | AI Training</div>
                   <div class="paper-desc">
                     Comprehensive platform supporting <span class="highlight">100+ models and 8 training methods</span>.
-                    Documents 2.5-year evolution from LLaMA Factory to democratized AI training across 142 countries.
+                    Documents 2.5-year evolution from LLaMA Factory to democratized open-source AI training.
                   </div>
                   <div class="paper-topics">
                     <span class="topic">100+ Models</span>
                     <span class="topic">GRPO/GSPO</span>
-                    <span class="topic">420K Models Trained</span>
+                    <span class="topic">Open Source</span>
                     <span class="topic">31 Citations</span>
                   </div>
                   <a href="pdfs/gym-training-platform.pdf" class="download-btn">📄 Download PDF</a>
